@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangalore — 16–20 July</title>
+<meta name="description" content="Private itinerary, Bangalore, 16 to 20 July.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5EFE4;
+    --paper-2:#EFE7D8;
+    --ink:#3A2130;
+    --ink-soft:#6E5361;
+    --wine:#7E2F47;
+    --gold:#AD8748;
+    --gold-soft:#C6A876;
+    --rose:#C99AA6;
+    --line:rgba(58,33,48,.14);
+    --line-2:rgba(58,33,48,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Hanken Grotesk',system-ui,sans-serif;
+    color:var(--ink);background:var(--paper);
+    font-weight:400;line-height:1.62;letter-spacing:.005em;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    mix-blend-mode:multiply;opacity:.55;
+  }
+  body::after{
+    content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(120% 80% at 50% -10%, transparent 60%, rgba(58,33,48,.05) 100%);
+  }
+  @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+  .wrap{max-width:600px;margin:0 auto;padding:0 26px 120px;position:relative;z-index:1}
+
+  .label{
+    font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;
+    font-weight:600;color:var(--wine);
+    display:inline-flex;align-items:center;gap:12px;
+  }
+  .label::before{content:'';width:26px;height:1px;background:var(--gold);display:inline-block}
+
+  header{padding:70px 0 30px;text-align:center}
+  .sprig{display:block;margin:0 auto 22px;width:44px;height:auto}
+  .kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px}
+  h1{
+    font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:400;
+    font-size:clamp(52px,13vw,80px);line-height:.98;letter-spacing:-.01em;color:var(--ink);
+  }
+  .rule-under{width:38px;height:1px;background:var(--line-2);margin:24px auto 20px}
+  .dates{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:21px;color:var(--ink-soft)}
+  .intent{max-width:400px;margin:22px auto 0;font-size:14.5px;color:var(--ink-soft)}
+  .intent strong{color:var(--ink);font-weight:600}
+
+  .rail{max-width:340px;margin:40px auto 0}
+  .rail-track{display:flex;gap:6px}
+  .rail-seg{flex:1;height:2px;background:var(--line-2);border-radius:2px;transition:background .8s ease}
+  .rail-seg.lit{background:var(--gold)}
+  .rail-label{margin-top:12px;text-align:center;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+
+  .section-head{text-align:center;margin:66px 0 28px}
+  .section-head .label{margin-bottom:14px}
+  .section-head h2{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.08;letter-spacing:-.01em}
+  .section-head p{font-size:13.5px;color:var(--ink-soft);max-width:380px;margin:8px auto 0}
+
+  .ledger-line{
+    display:flex;align-items:baseline;gap:16px;
+    padding:14px 4px;border-bottom:1px solid var(--line);animation:rise .5s ease;
+  }
+  .ledger-line .num{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-size:15px;min-width:22px}
+  .ledger-line s{color:var(--ink-soft);text-decoration-color:var(--line-2);flex:1;font-size:14.5px}
+  .ledger-line .done-tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .step-card{
+    background:var(--paper-2);border:1px solid var(--line);border-top:2px solid var(--gold);
+    padding:36px 32px 30px;position:relative;animation:rise .55s ease;
+  }
+  .step-card .num{font-family:'Fraunces',serif;font-style:italic;font-size:16px;color:var(--gold);letter-spacing:.02em}
+  .step-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:26px;line-height:1.16;margin:6px 0 14px;letter-spacing:-.01em}
+  .step-card p{font-size:15px;color:var(--ink-soft);margin-bottom:11px}
+  .step-card p strong{color:var(--ink);font-weight:600}
+  .step-why{
+    font-family:'Fraunces',serif;font-style:italic;font-size:15.5px;color:var(--wine);
+    border-left:1px solid var(--gold);padding-left:16px;margin:18px 0 4px;line-height:1.5;
+  }
+  .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;cursor:pointer;text-decoration:none;
+    font-family:'Hanken Grotesk',sans-serif;font-size:12px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;
+    padding:13px 22px;border-radius:0;transition:all .25s ease;border:1px solid var(--ink);
+  }
+  .btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn-primary:hover{background:var(--wine);border-color:var(--wine)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+  .btn-ghost:hover{border-color:var(--ink)}
+
+  .all-done{background:var(--paper-2);border:1px solid var(--line);border-top:2px solid var(--gold);padding:40px 30px;text-align:center;animation:rise .55s ease}
+  .all-done .mark{display:block;margin:0 auto 14px}
+  .all-done h3{font-family:'Fraunces',serif;font-weight:400;font-size:28px;margin-bottom:8px}
+  .all-done p{color:var(--ink-soft);font-size:14.5px;max-width:360px;margin:0 auto}
+
+  .day{border-bottom:1px solid var(--line)}
+  .day:first-of-type{border-top:1px solid var(--line)}
+  .day-head{width:100%;display:flex;align-items:center;gap:18px;text-align:left;background:none;border:none;cursor:pointer;padding:22px 4px;font-family:'Hanken Grotesk',sans-serif}
+  .day-head:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+  .day-idx{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--gold);min-width:20px}
+  .day-title{flex:1}
+  .day-title .dname{font-family:'Fraunces',serif;font-size:21px;font-weight:500;line-height:1.12;letter-spacing:-.01em}
+  .day-title .dmood{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);font-weight:600;margin-top:4px}
+  .chev{color:var(--gold);font-size:15px;transition:transform .35s ease}
+  .day.open .chev{transform:rotate(180deg)}
+  .day-body{display:none;padding:0 4px 26px 42px}
+  .day.open .day-body{display:block;animation:rise .4s ease}
+  .tline{list-style:none}
+  .tline li{display:grid;grid-template-columns:60px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .tline li:last-child{border-bottom:none}
+  .tline .t{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-size:15px;white-space:nowrap}
+  .tline .what strong{font-weight:600}
+  .tline .soft{color:var(--ink-soft);font-size:12.5px;display:block;margin-top:3px}
+  .day-note{margin-top:18px;font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--ink-soft);line-height:1.5}
+
+  .spot{padding:22px 4px;border-bottom:1px solid var(--line)}
+  .spot:first-of-type{border-top:1px solid var(--line)}
+  .spot .badge{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--wine);font-weight:600;margin-bottom:7px}
+  .spot h4{font-family:'Fraunces',serif;font-size:22px;font-weight:500;letter-spacing:-.01em}
+  .spot p{font-size:13px;color:var(--ink-soft);margin:5px 0 10px}
+  .spot .links{display:flex;gap:20px;flex-wrap:wrap}
+  .spot .links a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px}
+  .spot .links a:hover{color:var(--wine)}
+
+  .friend{background:var(--paper-2);border:1px solid var(--line);border-top:2px solid var(--gold);padding:36px 30px;text-align:center}
+  .friend .num{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-size:15px;letter-spacing:.02em}
+  .friend h3{font-family:'Fraunces',serif;font-weight:500;font-size:25px;margin:6px 0 14px}
+  .friend p{font-size:14.5px;color:var(--ink-soft);margin-bottom:10px}
+  .friend p strong{color:var(--ink);font-weight:600}
+  .friend .btn-row{justify-content:center}
+  .friend .step-why{text-align:left;margin-top:20px}
+
+  .fallback{margin-top:60px;padding-top:8px}
+  .fallback ul{list-style:none}
+  .fallback li{font-size:14px;color:var(--ink-soft);padding:13px 0 13px 26px;position:relative;border-bottom:1px solid var(--line)}
+  .fallback li:last-child{border-bottom:none}
+  .fallback li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+  .fallback li strong{color:var(--ink);font-weight:600}
+
+  footer{text-align:center;margin-top:64px}
+  footer .sprig{width:32px;margin-bottom:0;opacity:.7}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <svg class="sprig" viewBox="0 0 44 60" fill="none" aria-hidden="true">
+      <path d="M22 58 C22 40 22 24 22 8" stroke="#AD8748" stroke-width="1"/>
+      <path d="M22 20 C14 16 9 18 6 12 C13 11 18 13 22 20" stroke="#AD8748" stroke-width="1"/>
+      <path d="M22 20 C30 16 35 18 38 12 C31 11 26 13 22 20" stroke="#AD8748" stroke-width="1"/>
+      <path d="M22 32 C15 29 11 31 8 26 C14 25 18 27 22 32" stroke="#AD8748" stroke-width="1"/>
+      <path d="M22 32 C29 29 33 31 36 26 C30 25 26 27 22 32" stroke="#AD8748" stroke-width="1"/>
+      <circle cx="22" cy="7" r="2.4" fill="#C99AA6"/>
+    </svg>
+    <div class="kicker">Private Itinerary</div>
+    <h1>Bangalore</h1>
+    <div class="rule-under"></div>
+    <div class="dates">Thursday 16 — Monday 20 July</div>
+    <p class="intent">Decided in advance. <strong>One action at a time.</strong> Rest is scheduled, not skipped.</p>
+
+    <div class="rail" aria-label="Booking progress">
+      <div class="rail-track" id="railTrack"></div>
+      <div class="rail-label" id="railLabel">Step I of IV</div>
+    </div>
+  </header>
+
+  <section class="reveal">
+    <div class="section-head">
+      <span class="label">Before you go</span>
+      <h2>Four bookings</h2>
+      <p>Complete the step shown, mark it done, and the next appears.</p>
+    </div>
+    <div id="doneList"></div>
+    <div id="stepStage"></div>
+  </section>
+
+  <section class="reveal">
+    <div class="section-head">
+      <span class="label">On the ground</span>
+      <h2>The days</h2>
+      <p>One day open at a time.</p>
+    </div>
+    <div id="days"></div>
+  </section>
+
+  <section class="reveal">
+    <div class="section-head">
+      <span class="label">Saturday</span>
+      <h2>Dinner</h2>
+      <p>Four options, each a short hop from the hotel.</p>
+    </div>
+    <div id="spots"></div>
+  </section>
+
+  <section class="reveal">
+    <div class="section-head">
+      <span class="label">To share</span>
+      <h2>For my friend</h2>
+    </div>
+    <div class="friend">
+      <div class="num">Saturday 18 July · 7 pm</div>
+      <h3>The plan</h3>
+      <p><strong>First,</strong> drinks at my hotel — Radisson Blu, Marathahalli, on the ORR at Marathahalli Junction.</p>
+      <p><strong>Then,</strong> fifteen minutes to Sarjapur Road for dinner: Bier Library (calm) or Byg Brewski (buzzy). Your call.</p>
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Radisson%20Blu%20Bengaluru%20Outer%20Ring%20Road%20Marathahalli" target="_blank" rel="noopener">Radisson</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=10417325892752943169" target="_blank" rel="noopener">Bier Library</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=2468613895764706893" target="_blank" rel="noopener">Byg Brewski</a>
+      </div>
+      <div class="step-why">From Sarjapur it is one straight road to all three. No cross-city traffic.</div>
+    </div>
+  </section>
+
+  <section class="reveal fallback">
+    <div class="section-head">
+      <span class="label">Contingency</span>
+      <h2>If plans slip</h2>
+    </div>
+    <ul>
+      <li><strong>Wi-Fi drops Friday.</strong> Phone hotspot first, hotel lobby second.</li>
+      <li><strong>No cab at 4:00 Monday.</strong> Front desk keeps cars on call all night.</li>
+      <li><strong>Too tired for the outing.</strong> Skip the city, keep dinner.</li>
+      <li><strong>Overstimulated.</strong> Back to the room is always fine.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <svg class="sprig" viewBox="0 0 44 60" fill="none" aria-hidden="true">
+      <path d="M22 58 C22 40 22 24 22 8" stroke="#AD8748" stroke-width="1"/>
+      <path d="M22 20 C14 16 9 18 6 12 C13 11 18 13 22 20" stroke="#AD8748" stroke-width="1"/>
+      <path d="M22 20 C30 16 35 18 38 12 C31 11 26 13 22 20" stroke="#AD8748" stroke-width="1"/>
+      <circle cx="22" cy="7" r="2.4" fill="#C99AA6"/>
+    </svg>
+  </footer>
+</div>
+
+<script>
+const ROMAN=['I','II','III','IV','V','VI'];
+
+const steps=[
+  {title:"Book the hotel",
+   body:`<p>Open <strong>MakeMyTrip</strong>, search <strong>Bengaluru, 16–20 July, 4 nights, 1 adult</strong>.</p><p>Select <strong>Radisson Blu Bengaluru Outer Ring Road</strong> (Marathahalli). Five-star, spa, pool, work desk. Choose a <strong>free-cancellation rate</strong>, and confirm checkout reads <strong>20 July</strong>, not 19.</p>`,
+   why:"Five-star on the right corridor, two kilometres from Saturday's dinner. Booked off-Accor to keep the rate down.",
+   links:[{label:"MakeMyTrip",href:"https://www.makemytrip.com/hotels"},{label:"Call hotel",href:"tel:+918067076909"}]},
+  {title:"Book the outbound flight",
+   body:`<p>On <strong>Air India</strong>, search <strong>Pune → Bengaluru, 16 July</strong>, select <strong>AI9807, 18:55 → 20:40, non-stop</strong>.</p><p>Code <strong>FLYAI</strong> gives up to ₹3,000 off. Recent fare: ₹9,498.</p>`,
+   why:"Non-stop, lands 20:40, with only the last ninety minutes of Thursday worked from the airport.",
+   links:[{label:"Air India",href:"https://www.airindia.com"}]},
+  {title:"Book the return flight",
+   body:`<p>On <strong>Akasa</strong>, search <strong>Bengaluru → Pune, 20 July</strong>, select <strong>QP1311, 06:30 → 08:10</strong>.</p><p>Lands four hours before Sweden hours begin.</p>`,
+   why:"Zero lost work hours. The trip fits inside a long weekend.",
+   links:[{label:"Akasa Air",href:"https://www.akasaair.com"}]},
+  {title:"Confirm Saturday",
+   body:`<p>Send your friend the <strong>For my friend</strong> section below — the map links are tappable.</p><p>Once they choose Bier Library or Byg Brewski, a single call books the table.</p>`,
+   why:"The only social decision of the trip, and it is theirs to make.",
+   links:[]}
+];
+
+let idx=0;
+const stage=document.getElementById('stepStage');
+const doneList=document.getElementById('doneList');
+const railTrack=document.getElementById('railTrack');
+const railLabel=document.getElementById('railLabel');
+
+steps.forEach(()=>{const s=document.createElement('div');s.className='rail-seg';railTrack.appendChild(s);});
+const segs=[...railTrack.children];
+
+function updateRail(){
+  segs.forEach((s,i)=>s.classList.toggle('lit',i<idx));
+  railLabel.textContent = idx>=steps.length ? 'Complete' : `Step ${ROMAN[idx]} of ${ROMAN[steps.length-1]}`;
+}
+
+function renderStep(){
+  if(idx>=steps.length){
+    stage.innerHTML=`<div class="all-done">
+      <svg class="mark" width="52" height="52" viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="30" cy="30" r="25" fill="none" stroke="#AD8748" stroke-width="1"/>
+        <path d="M20 30 l7 7 l13 -15" fill="none" stroke="#7E2F47" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <h3>All four booked.</h3>
+      <p>One task remains, for Sunday evening only: book the 4:00 cab. It is written into Sunday below.</p>
+    </div>`;
+    updateRail();return;
+  }
+  const s=steps[idx];
+  const links=s.links.map(l=>`<a class="btn btn-ghost" href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`).join('');
+  stage.innerHTML=`<div class="step-card">
+    <div class="num">${ROMAN[idx]}.</div>
+    <h3>${s.title}</h3>${s.body}
+    <div class="step-why">${s.why}</div>
+    <div class="btn-row">${links}
+      <button class="btn btn-primary" onclick="completeStep()">Mark done</button>
+    </div></div>`;
+  updateRail();
+}
+function completeStep(){
+  const s=steps[idx];
+  const row=document.createElement('div');
+  row.className='ledger-line';
+  row.innerHTML=`<span class="num">${ROMAN[idx]}.</span><s>${s.title}</s><span class="done-tag">Done</span>`;
+  doneList.appendChild(row);
+  idx++;
+  renderStep();
+  stage.scrollIntoView({behavior:'smooth',block:'center'});
+}
+renderStep();
+
+const spots=[
+  {badge:"At the hotel · no travel",name:"Radisson Blu, Marathahalli",
+   desc:"Spa, open-air pool, room service. On the ORR at Marathahalli Junction. From Sarjapur, 45–60 min; from the Kasavanahalli side, 20–30 min.",
+   map:"https://www.google.com/maps/search/?api=1&query=Radisson%20Blu%20Bengaluru%20Outer%20Ring%20Road%20Marathahalli",tel:"+918067076909"},
+  {badge:"Calm · meets in the middle",name:"The Bier Library, Sarjapur Rd",
+   desc:"Open, relaxed, easy to talk over. Good pizzas. 4.5★",
+   map:"https://maps.google.com/?cid=10417325892752943169",tel:"+919036690900"},
+  {badge:"Buzzy · meets in the middle",name:"Byg Brewski, Sarjapur Rd",
+   desc:"Vast open-air garden, waterfront seating. Loud on Saturdays. 4.3★",
+   map:"https://maps.google.com/?cid=2468613895764706893",tel:"+918047166245"},
+  {badge:"Daytime coffee",name:"The Kind Roastery, Ecoworld",
+   desc:"Specialty coffee, quiet, near the hotel. Opens 8 AM. 4.7★",
+   map:"https://maps.google.com/?cid=14823165812582096833",tel:"+919035045330"}
+];
+const spotsEl=document.getElementById('spots');
+spots.forEach(s=>{
+  const el=document.createElement('div');el.className='spot';
+  el.innerHTML=`<span class="badge">${s.badge}</span><h4>${s.name}</h4><p>${s.desc}</p>
+    <div class="links"><a href="${s.map}" target="_blank" rel="noopener">View map</a><a href="tel:${s.tel}">Call</a></div>`;
+  spotsEl.appendChild(el);
+});
+
+const days=[
+  {name:"Thursday 16 · Departure",mood:"Travel evening",
+   rows:[
+    ["12:30","<strong>Work as usual</strong> from the coworking space.<span class='soft'>Bag packed the night before.</span>"],
+    ["17:00","<strong>Cab to Pune airport</strong> (25–35 min)."],
+    ["17:45","<strong>Final ninety minutes of work</strong> from airport Wi-Fi."],
+    ["18:55","<strong>AI9807 departs.</strong>"],
+    ["20:40","<strong>Land in Bengaluru.</strong> Cab to hotel (~60–90 min)."],
+    ["22:00","<strong>Check in.</strong> Room service, sleep."]
+   ],note:"Nothing required tonight but arriving."},
+  {name:"Friday 17 · Work",mood:"Sweden hours",
+   rows:[
+    ["08:30","<strong>Breakfast.</strong>"],
+    ["09:30","<strong>Free morning.</strong><span class='soft'>Pool, writing, or nothing.</span>"],
+    ["12:00","<strong>Set up the desk.</strong> Water, charger, hotspot tested."],
+    ["12:30","<strong>Full workday, 12:30–20:30.</strong><span class='soft'>No commute, no plans.</span>"],
+    ["21:00","<strong>Dinner at the hotel.</strong> Early night."]
+   ],note:"The whole trip is built so this day is effortless."},
+  {name:"Saturday 18 · Out",mood:"City, then dinner",
+   rows:[
+    ["09:30","<strong>Slow morning.</strong> No alarm."],
+    ["11:00","<strong>Coffee at The Kind Roastery.</strong><span class='soft'>Optional.</span>"],
+    ["13:00","<strong>One thing in the city.</strong><span class='soft'>Church Street books, or a Lalbagh walk. Pick one.</span>"],
+    ["17:30","<strong>Back at the hotel.</strong> Rest, dress."],
+    ["19:00","<strong>Friend arrives; drinks at the hotel first.</strong><span class='soft'>Stay in, or head to Sarjapur Road for dinner.</span>"],
+    ["23:00","<strong>Home.</strong>"]
+   ],note:"One outing, one dinner. That is a full day."},
+  {name:"Sunday 19 · Rest",mood:"Recovery",
+   rows:[
+    ["10:00","<strong>Late breakfast.</strong>"],
+    ["12:00","<strong>Pool or spa</strong>, or a nap."],
+    ["17:00","<strong>Pack fully.</strong> Monday outfit out, boarding pass downloaded."],
+    ["18:30","<strong>Book the 04:00 cab</strong> via Uber Reserve or the front desk.<span class='soft'>The trip's last task.</span>"],
+    ["19:30","<strong>Light dinner.</strong>"],
+    ["22:00","<strong>Sleep.</strong>"]
+   ],note:"Rest today is Monday's fuel."},
+  {name:"Monday 20 · Return",mood:"Early flight home",
+   rows:[
+    ["03:45","<strong>Wake.</strong> Everything packed yesterday."],
+    ["04:00","<strong>Cab to airport</strong> (~55–65 min, empty roads)."],
+    ["06:30","<strong>QP1311 departs.</strong>"],
+    ["08:10","<strong>Land in Pune.</strong> Home by ~09:00."],
+    ["09:15","<strong>Shower, chai.</strong>"],
+    ["12:30","<strong>Log on to Sweden.</strong>"]
+   ],note:"Zero work hours lost."}
+];
+const daysEl=document.getElementById('days');
+days.forEach((d,i)=>{
+  const el=document.createElement('div');
+  el.className='day'+(i===0?' open':'');
+  el.innerHTML=`
+    <button class="day-head" aria-expanded="${i===0}" onclick="toggleDay(this)">
+      <span class="day-idx">${ROMAN[i]}</span>
+      <span class="day-title"><span class="dname">${d.name}</span><span class="dmood">${d.mood}</span></span>
+      <span class="chev">▾</span>
+    </button>
+    <div class="day-body">
+      <ul class="tline">${d.rows.map(r=>`<li><span class="t">${r[0]}</span><span class="what">${r[1]}</span></li>`).join('')}</ul>
+      <div class="day-note">${d.note}</div>
+    </div>`;
+  daysEl.appendChild(el);
+});
+function toggleDay(btn){
+  const card=btn.closest('.day');
+  const wasOpen=card.classList.contains('open');
+  document.querySelectorAll('.day').forEach(x=>{x.classList.remove('open');x.querySelector('.day-head').setAttribute('aria-expanded','false');});
+  if(!wasOpen){card.classList.add('open');btn.setAttribute('aria-expanded','true');}
+}
+
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
